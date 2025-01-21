@@ -6,7 +6,7 @@ const RegisterForms = ({ toggleForm }) => {
   const togglePassword = () => setShowPassword(!showPassword);
 
   return (
-    <div className="flex justify-center items-center w-full p-4 select-none">
+    <div className="flex justify-center items-center w-full min-h-screen p-4 select-none">
       <div className="w-full max-w-md p-4 m-4 rounded-md bg-white bg-opacity-70">
         <div className="w-full px-4 py-4">
 
@@ -165,7 +165,7 @@ const RegisterForms = ({ toggleForm }) => {
           </form>
         </div>
       </div>
-    </div >
+    </div>
   );
 };
 
