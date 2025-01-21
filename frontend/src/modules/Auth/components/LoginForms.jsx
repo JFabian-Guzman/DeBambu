@@ -2,12 +2,12 @@ import React from "react";
 import { useState } from "react";
 
 
-const LoginForms = () => {
+const LoginForms = ({ toggleForm }) => {
   const [showPassword, setShowPassword] = useState(false);
   const togglePassword = () => setShowPassword(!showPassword);
 
   return (
-    <div className="flex justify-center items-center w-full min-h-screen p-4 select-none">
+    <div className="flex justify-center items-center w-full p-4 select-none">
       <div className="w-full max-w-md p-4 m-4 rounded-md bg-white bg-opacity-70">
         <div className="w-full px-4 py-4">
           <form>
@@ -89,7 +89,9 @@ const LoginForms = () => {
 
 
             <div className="flex items-center justify-end mt-2 ml-auto">
+              {/* ToDo: add this page */}
               <a
+                href="/forgot-password"
                 className="text-blue-600 font-semibold text-sm hover:underline"
               >
                 Olvidé mi contraseña
@@ -108,7 +110,10 @@ const LoginForms = () => {
 
             <p className="flex justify-center items-center text-sm mt-4 text-gray-800">
               No tienes una cuenta?
-              <a className="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap">Regístrate acá</a>
+              <a
+                className="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap"
+                onClick={toggleForm}
+              >Regístrate acá</a>
             </p>
 
 

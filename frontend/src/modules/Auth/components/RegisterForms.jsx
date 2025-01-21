@@ -1,12 +1,12 @@
 import React from "react";
 import { useState } from "react";
 
-const RegisterForms = () => {
+const RegisterForms = ({ toggleForm }) => {
   const [showPassword, setShowPassword] = useState(false);
   const togglePassword = () => setShowPassword(!showPassword);
 
   return (
-    <div className="flex justify-center items-center w-full min-h-screen p-4 select-none">
+    <div className="flex justify-center items-center w-full p-4 select-none">
       <div className="w-full max-w-md p-4 m-4 rounded-md bg-white bg-opacity-70">
         <div className="w-full px-4 py-4">
 
@@ -159,7 +159,8 @@ const RegisterForms = () => {
 
             <p className="flex justify-center items-center text-sm mt-4 text-gray-800">
               Ya tienes una cuenta?
-              <a className="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap">Inicia sesión aquí</a>
+              <a className="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap"
+                onClick={toggleForm}>Inicia sesión aquí</a>
             </p>
           </form>
         </div>
