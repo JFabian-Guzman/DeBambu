@@ -1,5 +1,6 @@
 import SideMenu from "../components/SideMenu";
 import General from "../components/General.jsx";
+import Orders from "../components/Orders.jsx";
 
 const Profile = () => {
   return (
@@ -9,7 +10,7 @@ const Profile = () => {
       </div>
 
       <div className="flex-grow">
-        <General />
+        <Orders />
       </div>
     </div>
   );
