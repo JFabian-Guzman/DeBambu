@@ -1,6 +1,7 @@
 import SideMenu from "../components/SideMenu";
 import General from "../components/General.jsx";
 import Orders from "../components/Orders.jsx";
+import Payment from "../components/Payment.jsx";
 
 const Profile = () => {
   return (
@@ -10,7 +11,7 @@ const Profile = () => {
       </div>
 
       <div className="flex-grow">
-        <Orders />
+        <Payment />
       </div>
     </div>
   );
