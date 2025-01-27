@@ -14,7 +14,7 @@ const SideMenu = () => {
   return (
     <div>
       <div
-        className="md:hidden shadow-md rounded-md p-4 fixed top-4 left-4 z-10 cursor-pointer"
+        className="md:hidden shadow-md rounded-md p-4 fixed top-4 right-10 z-10 cursor-pointer"
         onClick={toggleMenu}
       >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="black" className="w-6 h-6" onClick={toggleMenu}>
