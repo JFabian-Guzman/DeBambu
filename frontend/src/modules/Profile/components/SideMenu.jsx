@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const SideMenu = ({ onMenuClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,6 +9,11 @@ const SideMenu = ({ onMenuClick }) => {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+  };
+
+  const handleMenuItemClick = (option) => {
+    onMenuClick(option); // Llama la función onMenuClick de props
+    closeMenu(); // Cierra el menú después de hacer clic
   };
 
   return (
@@ -30,35 +35,35 @@ const SideMenu = ({ onMenuClick }) => {
           <a
             href="#"
             className="py-3 px-4 text-gray-500 hover:bg-gray-100 transition-colors"
-            onClick={() => onMenuClick("general")}
+            onClick={() => handleMenuItemClick("general")}
           >
             General
           </a>
           <a
             href="#"
             className="py-3 px-4 text-gray-500 hover:bg-gray-100 transition-colors"
-            onClick={() => onMenuClick("orders")}
+            onClick={() => handleMenuItemClick("orders")}
           >
             Pedidos
           </a>
           <a
             href="#"
             className="py-3 px-4 text-gray-500 hover:bg-gray-100 transition-colors"
-            onClick={() => onMenuClick("payment")}
+            onClick={() => handleMenuItemClick("payment")}
           >
             Pago
           </a>
           <a
             href="#"
             className="py-3 px-4 text-gray-500 hover:bg-gray-100 transition-colors"
-            onClick={() => onMenuClick("settings")}
+            onClick={() => handleMenuItemClick("settings")}
           >
             Ajustes
           </a>
           <a
             href="#"
             className="py-3 px-4 text-gray-500 hover:bg-gray-100 transition-colors"
-            onClick={() => onMenuClick("shippingAddress")}
+            onClick={() => handleMenuItemClick("shippingAddress")}
           >
             Dirección de envío
           </a>
@@ -67,12 +72,12 @@ const SideMenu = ({ onMenuClick }) => {
 
           <a href="#"
             className="py-3 px-4 text-gray-500 hover:bg-gray-100 transition-colors"
-            onClick={() => onMenuClick("help")}>
+            onClick={() => handleMenuItemClick("help")}>
             Centro de ayuda
           </a>
           <a href="#"
             className="py-3 px-4 text-gray-500 hover:bg-gray-100 transition-colors"
-            onClick={() => onMenuClick("suggestions")}>
+            onClick={() => handleMenuItemClick("suggestions")}>
             Sugerencias
           </a>
         </div>
