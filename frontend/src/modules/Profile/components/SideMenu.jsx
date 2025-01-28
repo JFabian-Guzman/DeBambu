@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const SideMenu = () => {
+const SideMenu = ({ onMenuClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -17,7 +17,7 @@ const SideMenu = () => {
         className="md:hidden shadow-md rounded-md p-4 fixed top-4 right-10 z-10 cursor-pointer"
         onClick={toggleMenu}
       >
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="black" className="w-6 h-6" onClick={toggleMenu}>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="black" className="w-6 h-6">
           <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
       </div>
@@ -27,28 +27,52 @@ const SideMenu = () => {
       >
         <div className="px-4 py-5 text-black font-medium">Mi Cuenta</div>
         <div className="flex flex-col">
-          <a href="#" className="py-3 px-4 text-gray-500 hover:bg-gray-100 transition-colors">
+          <a
+            href="#"
+            className="py-3 px-4 text-gray-500 hover:bg-gray-100 transition-colors"
+            onClick={() => onMenuClick("general")}
+          >
             General
           </a>
-          <a href="#" className="py-3 px-4 text-gray-500 hover:bg-gray-100 transition-colors">
+          <a
+            href="#"
+            className="py-3 px-4 text-gray-500 hover:bg-gray-100 transition-colors"
+            onClick={() => onMenuClick("orders")}
+          >
             Pedidos
           </a>
-          <a href="#" className="py-3 px-4 text-gray-500 hover:bg-gray-100 transition-colors">
+          <a
+            href="#"
+            className="py-3 px-4 text-gray-500 hover:bg-gray-100 transition-colors"
+            onClick={() => onMenuClick("payment")}
+          >
             Pago
           </a>
-          <a href="#" className="py-3 px-4 text-gray-500 hover:bg-gray-100 transition-colors">
+          <a
+            href="#"
+            className="py-3 px-4 text-gray-500 hover:bg-gray-100 transition-colors"
+            onClick={() => onMenuClick("settings")}
+          >
             Ajustes
           </a>
-          <a href="#" className="py-3 px-4 text-gray-500 hover:bg-gray-100 transition-colors">
+          <a
+            href="#"
+            className="py-3 px-4 text-gray-500 hover:bg-gray-100 transition-colors"
+            onClick={() => onMenuClick("shippingAddress")}
+          >
             Dirección de envío
           </a>
 
           <div className="border-b border-gray-200 ml-4 w-4/5"></div>
 
-          <a href="#" className="py-3 px-4 text-gray-500 hover:bg-gray-100 transition-colors">
+          <a href="#"
+            className="py-3 px-4 text-gray-500 hover:bg-gray-100 transition-colors"
+            onClick={() => onMenuClick("help")}>
             Centro de ayuda
           </a>
-          <a href="#" className="py-3 px-4 text-gray-500 hover:bg-gray-100 transition-colors">
+          <a href="#"
+            className="py-3 px-4 text-gray-500 hover:bg-gray-100 transition-colors"
+            onClick={() => onMenuClick("suggestions")}>
             Sugerencias
           </a>
         </div>
