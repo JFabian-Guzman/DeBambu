@@ -6,14 +6,14 @@ import Payment from "../components/Payment.jsx";
 import Settings from "../components/Settings.jsx";
 import ShippingAddress from "../components/ShippingAddress.jsx";
 // import Help from "../components/Help.jsx";
-// import Suggestions from "../components/Suggestions.jsx";
+import Suggestions from "../components/Suggestions.jsx";
 
 
 const Profile = () => {
-  const [selectedOption, setSelectedOption] = useState("shippingAddress");
+  const [selectedOption, setSelectedOption] = useState("general");
 
   const handleMenuClick = (option) => {
-    setSelectedOption(option); // Cambiar la opción seleccionada
+    setSelectedOption(option);
   };
 
   return (
@@ -30,7 +30,7 @@ const Profile = () => {
         {selectedOption === "shippingAddress" && <ShippingAddress />}
 
         {/* {selectedOption === "help" && <Help />} */}
-        {/* {selectedOption === "suggestions" && <Suggestions />} */}
+        {selectedOption === "suggestions" && <Suggestions />}
       </div>
     </div>
   );

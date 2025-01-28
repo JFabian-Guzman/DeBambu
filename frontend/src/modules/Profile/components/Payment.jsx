@@ -4,11 +4,9 @@ import { PlusCircle, Shield, Check } from 'lucide-react';
 const Payment = () => {
   return (
     <div className="max-w-3xl mx-auto p-6 ml-4">
-      {/* Cards Section */}
       <div className="mb-8">
         <h2 className="text-xl font-semibold text-gray-800 mb-4">Tarjetas</h2>
 
-        {/* Add Card Button */}
         <div className="bg-gray-100 rounded-lg mb-5">
           <button className="flex items-center justify-center gap-2 w-full text-gray-600 hover:text-gray-800">
             <PlusCircle className="w-5 h-5" />
@@ -16,13 +14,11 @@ const Payment = () => {
           </button>
         </div>
 
-        {/* No Cards Message */}
         <p className="text-gray-500 mt-4 text-sm">
           Aún no has guardado ninguna tarjeta.
         </p>
       </div>
 
-      {/* Security Information */}
       <div className="border-t pt-6">
         <div className="flex items-start gap-3 mb-4">
           <Shield className="w-5 h-5 text-gray-800 flex-shrink-0 mt-1" />

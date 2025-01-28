@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { User, MapPin } from 'lucide-react';
 
 const ShippingAddress = () => {
+  // ToDo: this info should be passed as props
   const [addresses, setAddresses] = useState([
     {
       id: 1,
@@ -23,25 +24,14 @@ const ShippingAddress = () => {
     }
   ]);
 
-  const handleDelete = (id) => {
-    setAddresses(addresses.filter(address => address.id !== id));
-  };
-
-  const handleEdit = (id) => {
-    // Lógica para editar una dirección, por ejemplo:
-    alert(`Editar dirección con ID: ${id}`);
-  };
-
   return (
     <div className="max-w-3xl mx-auto p-6 ml-4">
       <h2 className="text-xl font-semibold text-gray-800 mb-4">Dirección de envío</h2>
 
-      {/* Add New Address Button */}
       <button className="bg-red-500 text-white px-4 py-2 rounded-lg mb-6 hover:bg-red-600">
         Añadir nueva dirección
       </button>
 
-      {/* Address Cards Container */}
       <div className="flex-1 overflow-y-auto max-h-[calc(100vh-200px)] pr-8">
         {addresses.map((address) => (
           <div
@@ -71,13 +61,11 @@ const ShippingAddress = () => {
             <div className="flex gap-4 mt-4">
               <button
                 className="text-blue-500 hover:text-blue-600"
-                onClick={() => handleEdit(address.id)}
               >
                 Editar
               </button>
               <button
                 className="text-blue-500 hover:text-blue-600"
-                onClick={() => handleDelete(address.id)}
               >
                 Eliminar
               </button>
