@@ -1,10 +1,12 @@
 import '../styles/Home.css';
+import Navbar from '../../Shared/components/Navbar';
 
 const HomeScreen = () => {
 
   return (
     <div className='bg-[url(/home_image.jpg)] bg-cover bg-center bg-no-repeat flex items-center justify-center h-screen'>
       <div className="absolute w-full h-screen bg-gradient-to-b from-[rgba(0,0,0,0.25)] to-black"></div>
+      <Navbar />
       <section className="w-screen h-screen content-center p-8 justify-center relative flex flex-col items-center">
         <h1 className="text-8xl font-bold relative">Bienvenido a <span className="text-green-600">DeBambu</span></h1>
         <p className="text-2xl mt-4 relative">Tu destino para un estilo de vida ecológico.</p>
