@@ -5,7 +5,7 @@ import Orders from "../components/Orders.jsx";
 import Payment from "../components/Payment.jsx";
 import Settings from "../components/Settings.jsx";
 import ShippingAddress from "../components/ShippingAddress.jsx";
-// import Help from "../components/Help.jsx";
+import HelpCenter from "../components/HelpCenter.jsx";
 import Suggestions from "../components/Suggestions.jsx";
 
 
@@ -28,8 +28,7 @@ const Profile = () => {
         {selectedOption === "payment" && <Payment />}
         {selectedOption === "settings" && <Settings />}
         {selectedOption === "shippingAddress" && <ShippingAddress />}
-
-        {/* {selectedOption === "help" && <Help />} */}
+        {selectedOption === "help" && <HelpCenter />}
         {selectedOption === "suggestions" && <Suggestions />}
       </div>
     </div>
