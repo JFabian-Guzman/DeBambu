@@ -8,10 +8,10 @@ const RegisterForms = ({ toggleForm }) => {
   return (
     <div className="flex justify-center items-center w-full min-h-screen p-4 select-none">
       <div className="w-full max-w-md p-4 m-4 rounded-md bg-white bg-opacity-70">
-        <div className="w-full px-4 py-4">
+        <div className="w-full px-4">
 
           <form>
-            <div className="mb-12 flex justify-center">
+            <div className="mb-8 mt-1 flex justify-center">
               <h3 className="text-gray-800 text-3xl font-extrabold text-center">Crea una cuenta</h3>
             </div>
 
@@ -37,7 +37,7 @@ const RegisterForms = ({ toggleForm }) => {
               </svg>
             </div>
 
-            <div className="relative flex items-center mt-8">
+            <div className="relative flex items-center mt-6">
               <input
                 name="phone"
                 type="text"
@@ -60,7 +60,7 @@ const RegisterForms = ({ toggleForm }) => {
 
             </div>
 
-            <div className="relative flex items-center mt-8">
+            <div className="relative flex items-center mt-6">
               <input
                 name="email"
                 type="email"
@@ -82,7 +82,7 @@ const RegisterForms = ({ toggleForm }) => {
             </div>
 
 
-            <div className="relative flex items-center mt-8">
+            <div className="relative flex items-center mt-6">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
