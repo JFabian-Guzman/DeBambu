@@ -10,6 +10,7 @@ module.exports = {
         'ease-out-bounce': 'cubic-bezier(0.25, 1.5, 0.5, 1)', // Bouncy effect
       },
     },
+    
   },
   plugins: [
     require('tailwindcss'),
