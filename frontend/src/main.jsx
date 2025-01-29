@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import Product from './modules/Product/Product.jsx';
+import App from './App.jsx';
 
 const product = {
   productName: "Stylish Leather Jacket",
@@ -22,9 +23,10 @@ const product = {
     "https://images.unsplash.com/photo-1528148343865-51218c4a13e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwzfHxoZWFkcGhvbmV8ZW58MHwwfHx8MTcyMTMwMzY5MHww&ixlib=rb-4.0.3&q=80&w=1080"
   ]
 };
+{/* <Product product={product} /> */}
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Product product={product} />
+    <App />
   </StrictMode>,
 );

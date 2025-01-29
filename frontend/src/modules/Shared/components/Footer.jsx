@@ -12,9 +12,8 @@ const theme =
 
 const FooterComponent = () =>{
   return (
-    <Footer container theme={theme}>
-      <Footer.Copyright href="#" by={<span className="text-white">DeBambu</span>} year={2025} />
-      <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center ">
+    <Footer container className="flex justify-end md:justify-end" theme={theme}>
+      <div className="mt-4 flex space-x-6 sm:mt-0 ">
         <Footer.Icon className="hover:text-white" href="#" icon={BsInstagram} />
       </div>
     </Footer>

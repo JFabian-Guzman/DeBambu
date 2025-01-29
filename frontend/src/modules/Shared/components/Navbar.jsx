@@ -13,21 +13,33 @@ const theme = {
     "base": "flex items-center text-white hover:text-white",
   },
   "link": {
-    "base": "flex items-center justify-center py-2 px-3 text-lg",
+    "base": "flex items-center justify-center py-2 px-3 text-lg ",
     "active": {
-      "on": "text-green-600 bg-transparent hover:text-green-700",
-      "off": "text-white bg-transparent hover:text-green-700 "
+      "on": "text-green-600 sm:hover:text-green-600 bg-transparent md:hover:text-green-700",
+      "off": "text-white sm:hover:text-white bg-transparent  md:hover:text-green-700 "
     },
     "disabled": {
       "on": "text-gray-400 hover:cursor-not-allowed dark:text-gray-600",
       "off": ""
     }
+  },
+  "collapse": {
+    "base": "w-full md:block md:w-auto",
+    "list": "mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium bg-white/10 md:bg-transparent",
+    "hidden": {
+      "on": "hidden",
+      "off": ""
+    }
+  },
+  "toggle": {
+    "base": "inline-flex  bg-black focus:bg-black hover:bg-black items-center rounded-lg p-2 text-sm text-gray-500 focus:outline-none md:hidden",
+    "icon": "h-6 w-6 shrink-0"
   }
 };
 
 const themeButton = {
   color: {
-    "light": "enabled:hover:border-white bg-transparent text-white   enabled:hover:bg-transparent ",
+    "light": "sm:enabled:hover:border-none md:enabled:hover:border-white bg-transparent text-white   enabled:hover:bg-transparent ",
   }
 };
 
@@ -38,8 +50,8 @@ const Nav = () => {
         <Navbar.Brand href="/">
           <span className="self-center whitespace-nowrap text-xl font-semibold">DeBambu</span>
         </Navbar.Brand>
-        <Navbar.Toggle />
-        <Navbar.Collapse className="flex justify-center items-center">
+        <Navbar.Toggle/>
+        <Navbar.Collapse >
           <Navbar.Link href="#" active>
             Inicio
           </Navbar.Link>
@@ -51,7 +63,6 @@ const Nav = () => {
             <path stroke="currentColor" strokeWidth="2" d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
           </svg>
           </Button>
-          <Navbar.Toggle />
         </Navbar.Collapse>
       </Navbar>
     </div>
