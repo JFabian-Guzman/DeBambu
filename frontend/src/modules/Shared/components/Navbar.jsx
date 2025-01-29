@@ -1,11 +1,9 @@
 
 import { Button, Navbar } from "flowbite-react";
 
-import logo from "../../../assets/logo_bambu.jpeg";
-
 const theme = {
   "root": {
-    "base": "bg-transparent fixed z-10 w-full top-0 my-0 py-5",
+    "base": "bg-transparent fixed z-10 w-full top-0 my-0 p-6",
     "rounded": {
       "on": "rounded",
       "off": ""
@@ -27,11 +25,16 @@ const theme = {
   }
 };
 
+const themeButton = {
+  color: {
+    "light": "enabled:hover:border-white bg-transparent text-white   enabled:hover:bg-transparent ",
+  }
+};
 
 const Nav = () => {
   return (
     <div className="flex items-center h-screen">
-      <Navbar rounded className="w-full" theme={theme}>
+      <Navbar fluid rounded className="w-full" theme={theme}>
         <Navbar.Brand href="/">
           <span className="self-center whitespace-nowrap text-xl font-semibold">DeBambu</span>
         </Navbar.Brand>
@@ -43,8 +46,10 @@ const Nav = () => {
           <Navbar.Link href="#" className="flex justify-center items-center">
             Tienda
           </Navbar.Link>
-          <Button className="bg-green-700">
-              Iniciar Sesión
+          <Button color="light" theme={themeButton}>
+          <svg className="w-6 h-6 text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" strokeWidth="2" d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+          </svg>
           </Button>
           <Navbar.Toggle />
         </Navbar.Collapse>

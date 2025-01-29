@@ -1,5 +1,6 @@
 import '../styles/Home.css';
 import Navbar from '../../Shared/components/Navbar';
+import Footer from '../components/Footer';
 
 const HomeScreen = () => {
 
@@ -17,6 +18,7 @@ const HomeScreen = () => {
           Comprar
         </button>
       </section>
+      <Footer />
     </div>
   );
 };
