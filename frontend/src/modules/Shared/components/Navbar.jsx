@@ -1,5 +1,6 @@
 
 import { Button, Navbar } from "flowbite-react";
+import { Link } from "react-router-dom";
 
 const theme = {
   "root": {
@@ -39,7 +40,7 @@ const theme = {
 
 const themeButton = {
   color: {
-    "light": "sm:enabled:hover:border-none md:enabled:hover:border-white bg-transparent text-white   enabled:hover:bg-transparent ",
+    "light": "sm:enabled:hover:border-none border-none md:enabled:hover:border-white bg-transparent text-white   enabled:hover:bg-transparent ",
   }
 };
 
@@ -52,16 +53,18 @@ const Nav = () => {
         </Navbar.Brand>
         <Navbar.Toggle/>
         <Navbar.Collapse >
-          <Navbar.Link href="#" active>
+          <Navbar.Link href="/" active>
             Inicio
           </Navbar.Link>
-          <Navbar.Link href="#" className="flex justify-center items-center">
+          <Navbar.Link href="/shop" className="flex justify-center items-center">
             Tienda
           </Navbar.Link>
           <Button color="light" theme={themeButton}>
-          <svg className="w-6 h-6 text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" strokeWidth="2" d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
-          </svg>
+          <Link to="/login">
+            <svg className="w-6 h-6 text-white hover:text-green-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" strokeWidth="2" d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+            </svg>
+          </Link>
           </Button>
         </Navbar.Collapse>
       </Navbar>
